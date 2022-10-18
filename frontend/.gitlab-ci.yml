@@ -1,0 +1,53 @@
+stages:
+  - build
+  - deploy
+
+before_script:
+  - |
+    # docker variables for name and tag of new image
+    export DOCKER_TAG="${CI_COMMIT_BRANCH}"
+    export DOCKER_REPO="engie-lab-cylergie"
+    export DOCKER_IMAGE="docker-nexus.engie-cofely.net:9443/${DOCKER_REPO}/${CI_PROJECT_NAME}:${DOCKER_TAG}"
+# Build of docker image and push it to project Container registry
+build-docker-image:
+  # Lightweight image with support of running docker in docker
+  image: kroniak/ssh-client
+  stage: build
+  script:
+    # Set right chmod on SSH key file
+    - chmod 400 $EC2_SSH_USER_KEY
+    # Clean workdir before shared content
+    - ssh -o StrictHostKeyChecking=no -i $EC2_SSH_USER_KEY "${EC2_SSH_USER}@${EC2_PROD_HOST}" "rm -rf /home/devops/.git"
+     # Share content with distance server
+    - scp -o StrictHostKeyChecking=no -i $EC2_SSH_USER_KEY -r . "${EC2_SSH_USER}@${EC2_PROD_HOST}":/home/devops
+    # Login to Container registry
+    - ssh -o StrictHostKeyChecking=no -i $EC2_SSH_USER_KEY "${EC2_SSH_USER}@${EC2_PROD_HOST}" "docker login -u $REGISTRY_USER_PROD --password $REGISTRY_PASSWORD_PROD $REGISTRY_HOST_PROD"
+    # Build our docker image
+    - ssh -o StrictHostKeyChecking=no -i $EC2_SSH_USER_KEY "${EC2_SSH_USER}@${EC2_PROD_HOST}" "docker build -t $DOCKER_IMAGE ."
+    # Save built image to Container registry under branch name tag and commit hash tag
+    - ssh -o StrictHostKeyChecking=no -i $EC2_SSH_USER_KEY "${EC2_SSH_USER}@${EC2_PROD_HOST}" "docker push $DOCKER_IMAGE"
+  rules:
+    - if: '($CI_PIPELINE_SOURCE == "push" || $CI_PIPELINE_SOURCE == "merge_request_event") && $CI_COMMIT_BRANCH == "master"'
+      when: always
+deploy-docker-image:
+  # Lightweight image with ssh
+  image: kroniak/ssh-client
+  stage: deploy
+  script:
+    # Set right chmod on SSH key file
+    - chmod 400 $EC2_SSH_USER_KEY
+    # Login to Gitlab Container registry
+    - ssh -o StrictHostKeyChecking=no -i $EC2_SSH_USER_KEY "${EC2_SSH_USER}@${EC2_PROD_HOST}" "docker login -u $REGISTRY_USER_PROD --password $REGISTRY_PASSWORD_PROD $REGISTRY_HOST_PROD"
+    - ssh -o StrictHostKeyChecking=no -i $EC2_SSH_USER_KEY "${EC2_SSH_USER}@${EC2_PROD_HOST}" "docker stop $CI_PROJECT_NAME"
+    - ssh -o StrictHostKeyChecking=no -i $EC2_SSH_USER_KEY "${EC2_SSH_USER}@${EC2_PROD_HOST}" "docker rm $CI_PROJECT_NAME"
+    # Download and run new image
+    - echo "$EC2_SSH_USER_KEY ${EC2_SSH_USER}@${EC2_PROD_HOST}"
+    - ssh -o StrictHostKeyChecking=no -i $EC2_SSH_USER_KEY "${EC2_SSH_USER}@${EC2_PROD_HOST}"
+      docker run
+      --name=$CI_PROJECT_NAME
+      --restart=always
+      -p 80:8080
+      -d $DOCKER_IMAGE
+  rules:
+    - if: '($CI_PIPELINE_SOURCE == "push" || $CI_PIPELINE_SOURCE == "merge_request_event") && $CI_COMMIT_BRANCH == "master"'
+      when: always

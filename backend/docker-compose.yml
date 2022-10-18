@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  db:
+    image: postgres
+    volumes:
+      - /data/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_NAME=bmconso
+      - POSTGRES_USER=bmconso
+      - POSTGRES_PASSWORD=password
+  web:
+    image: demo-web
+    restart: always
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - /data/appli:/code
+    ports:
+      - "8000:8000"
+    environment:
+      - POSTGRES_NAME=bmconso
+      - POSTGRES_USER=bmconso
+      - POSTGRES_PASSWORD=password
+    depends_on:
+      - db

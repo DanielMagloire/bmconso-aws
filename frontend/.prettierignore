@@ -1,0 +1,7 @@
+node_modules/
+/build/
+/config/
+/dist/
+/test/unit/coverage/
+typings/
+package-lock.json

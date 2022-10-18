@@ -1,0 +1,11 @@
+Initialisation : 
+Lancer le fichier "Creation_table_min_max.py"
+Test_ERENA=Actualiser('Agen (47)',2,['3491000900'],['G1 - Puissance'],['MW'],[4,4],[800,800],[4000,4000],['M3','M3'],NiveauxMin,NiveauxMax,[2000,3000],[1,1],2,[1,2],[14000,14000],[100,100],[1000,1000],[90,80],0,0,1,[1,2],nbCamionsMin,nbCamionsMax,[500,500],['M3'])
+Test_ERENA=Actualiser('Andrézieux-Bouthéon (42)',2,['1850760000'],['CPT CH2 - ENERGIE'],[5],[4,4],[800,800],[4000,4000],['M3','M3'],NiveauxMin,NiveauxMax,[2000,3000],[1,1],2,[1,2],[14000,14000],[100,100],[1000,1000],[90,80],0,0,1,[1,2],nbCamionsMin,nbCamionsMax,[500,500],['M3'])
+
+
+Appel IA:
+[Json,Dataframe]=Test_ERENA.IA()
+
+
+

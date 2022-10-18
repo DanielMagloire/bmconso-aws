@@ -1,0 +1,185 @@
+﻿Station;ID_HISTO;ID_PREV;NOM
+Abbeville (80);7005;29592;abbeville
+Agen (47);7524;16355;agen
+Aix-en-Provence (13);7654;3478;aix_en_provence
+Ajaccio - Campo dell'Oro (2A);7761;9742;ajaccio
+Albert-Bray (80);7059;29605;albert
+Albi (81);7632;30378;albi
+Alençon (61);7139;21698;alencon
+Alistro (2B);7775;10058;san_giuliano
+Ambérieu (01);7482;3;amberieu_en_bugey
+Andrézieux-Bouthéon (42);7475;14883;andrezieux_boutheon
+Angers-Beaucouzé (49);7230;16863;angers
+Angers-Marcé (49);7228;16863;angers
+Angoulême - Brie Champniers (16);7420;4533;angouleme
+Annecy (74);7490;27598;annecy
+Annemasse (74);7490;27600;annemasse
+Aubenas - Lanas (07);7570;2097;aubenas
+Auch (32);7622;180;journans
+Aurillac (15);7549;4274;aurillac
+Auxerre-Perrigny (89);7266;32470;auxerre
+Avignon (84);7563;31027;avignon
+Avord (18);7257;5408;avord
+Bagnères-de-Luchon (31);7724;10486;bagneres_de_luchon
+Bastia (2B);7790;9880;bastia
+Beauvais (60);7055;21064;beauvais
+Belfort-Dorans (90);7296;32926;dorans
+Bergerac (24);7530;6939;bergerac
+Besançon (25);7288;7497;besancon
+Biarritz (64);7602;23532;biarritz
+Biscarrosse (40);7503;14303;biscarrosse
+Blois (41);7245;14607;blois
+Bordeaux (33);7510;11537;bordeaux
+Boulogne (62);7002;22338;boulogne_sur_mer
+Bourg-Saint-Maurice (73);7497;27334;bourg_saint_maurice
+Bourges (18);7255;5423;bourges
+Brest (29);7110;9478;brest
+Briançon (05);7593;33491;briancon
+Brive-Laroche (19);7438;5710;brive_la_gaillarde
+Brive-Souillac (46);7439;5710;brive_la_gaillarde
+Bâle / Mulhouse (68);7299;25349;mulhouse
+Béziers Cap d'Agde (34);7638;12045;beziers
+Caen (14);7027;3672;caen
+Calais / Marck (62);7009;22365;calais
+Calvi (2B);7754;9891;calvi
+Camaret (29);7104;9481;camaret_sur_mer
+Cambrai / Epinoy (62);7017;20499;cambrai
+Cannes (06);7684;1950;cannes
+Cap Béar (66);7749;24537;port_vendres
+Cap Corse (2B);7785;9916;centuri
+Cap Ferret (33);7500;11706;lege_cap_ferret
+Cap Gris-Nez (62);7004;22244;audinghen
+Cap Pertusato (2A);7770;9761;bonifacio
+Cap Sagro (2B);7791;10043;sisco
+Cap de la Hague (50);7020;17379;flamanville
+Cap de la Hve (76);7028;28179;le_havre
+Carcassonne (11);7635;2812;carcassonne
+Carpentras (84);7586;31051;carpentras
+Cazaux (33);7502;34233;la_teste_de_buch
+Chambéry / Aix-Les-Bains (73);7491;27344;chambery
+Chamonix-Mont-Blanc (74);7469;27625;chamonix_mont_blanc
+Charleville-Mézières (08);7075;35560;charleville_mezieres
+Chartres (28);7143;9158;chartres
+Cherbourg (50);7024;17329;cherbourg
+Châlons-en-Champagne (51);7166;36308;chalons_en_champagne
+Château-Chinon (58);7270;20136;chateau_chinon__ville_
+Châteaudun (28);7140;9160;chateaudun
+Châteauroux (36);7354;12704;chateauroux
+Clermont-Ferrand (63);7460;23074;clermont_ferrand
+Cognac (16);7412;7949;cognac
+Colmar (68);7197;25192;colmar
+Dax (40);7603;14345;dax
+Deauville (14);7031;3772;deauville
+Dieppe (76);7040;28048;dieppe
+Dijon / Longvic (21);7280;6180;dijon
+Dinard (35);7125;12417;dinard
+Dole-Tavaux (39);7386;13899;dole
+Dunkerque (59);7010;20555;dunkerque
+Embrun (05);7591;1790;embrun
+Epinal (88);7173;32089;epinal
+Evreux (27);7038;8627;evreux
+Figari (2A);7780;9784;figari
+Formiguères (66);7737;24478;formigueres
+Gourdon (46);7535;16143;gourdon
+Grenoble/St-Etienne-St-Geoirs (38);7486;13358;grenoble
+Grenoble/agglo Le Versoud (38);7487;13358;grenoble
+Guéret Saint-Laurent (23);7361;6742;gueret
+Hyères (83);7667;30937;hyeres
+Ile Rousse (2B);7753;9941;l_ile_rousse
+Ile d'Yeu - Saint-Sauveur (85);7300;31276;l_ile_d_yeu
+Ile de Batz (29);7116;9538;ile_de_batz
+Ile de Groix (56);7203;19181;groix
+Istres (13);7647;33685;istres
+La Roche-sur-Yon (85);7306;31349;la_roche_sur_yon
+La Rochelle - Aerodrome (17);7316;5211;la_rochelle
+Landivisiau (29);7106;9558;landivisiau
+Langres (52);7283;34875;langres
+Lannion (22);7118;33918;lannion
+Lanveoc (29);7109;9572;lanveoc
+Laval (53);7134;17921;laval
+Le Bourget (93);7150;33229;le_bourget
+Le Havre - Octeville (76);7046;28179;le_havre
+Le Luc - Cannet des Maures (83);7675;30941;le_luc
+Le Mans (72);7235;27088;le_mans
+Le Puy - Loudes (43);7471;15358;le_puy_en_velay
+Le Talut - Belle-Ile (56);7207;19263;le_palais
+Le Touquet (62);7003;33632;le_touquet_paris_plage
+Leucate (11);7666;2941;leucate
+Lille (59);7015;20708;lille
+Limoges (87);7434;31816;limoges
+Lons-le-Saunier (39);7390;13995;lons_le_saunier
+Lorient (56);7205;13995;lons_le_saunier
+Luxeuil (70);7292;26087;luxeuil_les_bains
+Lyon - Bron (69);7480;25534;bron
+Lyon - Saint-Exupéry (69);7481;25627;lyon
+Marignane (13);7650;3519;marignane
+Melun (77);7153;28815;melun
+Mende - Chabrits (48);7554;16761;mende
+Metz (57);7090;19797;metz
+Metz-Nancy-Lorraine (57);7093;19606;goin
+Millau - Soulobres (12);7558;3317;millau
+Mont-Aigoual (30);7560;10430;valleraugue
+Mont-Saint-Vincent (71);7382;26652;mont_saint_vincent
+Mont-de-Marsan (40);7607;14449;mont_de_marsan
+Montauban (82);7540;30796;montauban
+Montpellier (34);7643;12179;montpellier
+Montélimar (26);7577;8226;montelimar
+Muret (31);7628;10826;muret
+Mâcon (71);7385;26603;macon
+Nancy - Essey (54);7180;18232;essey_les_nancy
+Nancy - Ochey (54);7181;18438;ochey
+Nantes (44);7222;15569;nantes
+Nevers (58);7260;20267;nevers
+Nice (06);7690;2005;nice
+Niort (79);7330;29453;niort
+Nîmes - Courbessac (30);7645;10281;nimes
+Nîmes - Garons (30);7646;10281;nimes
+Orange (84);7579;31106;orange
+Orly (91);7149;33281;orly
+Orléans (45);7249;15906;orleans
+Ouessant (29);7100;9604;ouessant
+Paray-le-Monial - St-Yan (71);7379;26674;paray_le_monial
+Paris - Montsouris (75);7156;27830;paris_14eme_arrondissement
+Pau (64);7610;23817;pau
+Perpignan (66);7747;24525;perpignan
+Ploudalmezeau (29);7101;9625;ploudalmezeau
+Ploumanac'h (22);7117;33932;perros_guirec
+Pointe de Chassiron (17);7314;5234;saint_denis_d_oleron
+Pointe de Socoa (64);7600;23591;ciboure
+Pointe du Raz (29);7103;9615;plogoff
+Poitiers (86);7335;31639;poitiers
+Pontoise - Cormeilles (95);7053;33441;pontoise
+Porquerolles (83);7670;30937;hyeres
+Porto-Vecchio (2A);7768;9823;porto_vecchio
+Quimper (29);7201;9674;quimper
+Reims-Prunay (51);7072;35860;reims
+Rennes (35);7130;12549;rennes
+Roanne (42);7477;25678;les_sauvages
+Rochefort Saint-Agnant (17);7317;5210;rochefort
+Rodez (12);7552;3374;rodez
+Roissy (95);7157;33446;roissy_en_france
+Romorantin (41);7247;14778;romorantin_lanthenay
+Rouen (76);7037;28366;rouen
+Saint-Auban (04);7588;2031;saint_auban
+Saint-Brieuc (22);7120;34059;saint_brieuc
+Saint-Dizier (52);7169;35187;saint_dizier
+Saint-Etienne (42);7475;15089;saint_etienne
+Saint-Girons (09);7627;2667;saint_girons
+Saint-Nazaire (44);7217;15642;saint_nazaire
+Saint-Quentin (02);7061;1092;saint_quentin
+Salon-de-Provence (13);7648;3559;salon_de_provence
+Solenzara - Base aérienne (2B);7765;9832;sari_solenzara
+Strasbourg (67);7190;25059;strasbourg
+Sète (34);7641;12300;sete
+Tarbes (65);7621;24357;tarbes
+Toulon (83);7660;31003;toulon
+Toulouse-Blagnac (31);7630;10979;toulouse
+Toulouse-Francazal (31);7631;10979;toulouse
+Tours (37);7240;13164;tours
+Toussus-le-Noble (78);7146;29264;toussus_le_noble
+Trappes (78);7145;29265;trappes
+Troyes (10);7168;34557;troyes
+Valence (26);7581;8385;valence
+Vannes-Séné (56);7210;19368;vannes
+Vichy (03);7374;1539;vichy
+Villacoublay (78);7147;29269;velizy_villacoublay
