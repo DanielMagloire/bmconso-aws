@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-m04a@7s2d8^u&@9e8mx=#w9%+tx@fy$m#92_jysut(^8&_$%1&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["bmconso-engie-env.eba-ixdutcv9.us-east-1.elasticbeanstalk.com"]
+ALLOWED_HOSTS = []
 
 CORS_ALLOW_ALL_ORIGINS = True
 
@@ -99,6 +99,25 @@ DATABASES = {
     #     'PORT': 5432,
     # }
 }
+
+# if 'RDS_DB_NAME' in os.environ:
+#     DATABASES = {
+#         'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': os.environ['RDS_DB_NAME'],
+#         'USER': os.environ['RDS_USERNAME'],
+#         'PASSWORD': os.environ['RDS_PASSWORD'],
+#         'HOST': os.environ['RDS_DB_NAME'],
+#         'PORT': os.environ['RDS_PORT'],
+#         }
+#     }
+# else:
+#     DATABASES = {
+#         'default': {
+#         'ENGINE': 'django.db.backends.models',
+#         'NAME': BASE_DIR / ''db.models',
+#         }
+#     }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
