@@ -100,24 +100,35 @@ WSGI_APPLICATION = 'djangobackend.wsgi.application'
 #     # }
 # }
 
-if 'RDS_DB_NAME' in os.environ:
-    DATABASES = {
-        'default': {
+# if 'RDS_DB_NAME' in os.environ:
+#     DATABASES = {
+#         'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': os.environ['RDS_DB_NAME'],
+#         'USER': os.environ['RDS_USERNAME'],
+#         'PASSWORD': os.environ['RDS_PASSWORD'],
+#         'HOST': os.environ['RDS_DB_NAME'],
+#         'PORT': os.environ['RDS_PORT'],
+#         }
+#     }
+# else:
+#     DATABASES = {
+#         'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#         }
+#     }
+
+DATABASES = {
+    'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ['RDS_DB_NAME'],
-        'USER': os.environ['RDS_USERNAME'],
-        'PASSWORD': os.environ['RDS_PASSWORD'],
-        'HOST': os.environ['RDS_DB_NAME'],
-        'PORT': os.environ['RDS_PORT'],
-        }
+        'NAME': 'ebdb',
+        'USER': 'postgres',
+        'PASSWORD': 'password',
+        'HOST': 'awseb-e-89hdnck5sm-stack-awsebrdsdatabase-pcm2rvqbzxnm.cwdrlrfadoaf.us-east-1.rds.amazonaws.com',
+        'PORT': 5432,
     }
-else:
-    DATABASES = {
-        'default': {
-        'ENGINE': 'django.db.backends.models',
-        'NAME': BASE_DIR / 'db.models',
-        }
-    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
