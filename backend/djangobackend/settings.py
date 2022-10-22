@@ -183,10 +183,10 @@ AWS_S3_OBJECT_PARAMETERS = {
 }
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = 'public-read'
-AWS_LOCATION = 'static'
+AWS_LOCATION = 'src'
 
 STATICFILES_DIRS = [
-    'backend/static',
+    'frontend/src',
 ]
 STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
