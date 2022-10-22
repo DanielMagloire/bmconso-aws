@@ -9,8 +9,11 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
+from distutils.command.config import config
 import os
 from pathlib import Path
+
+from numpy import False_
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,7 +26,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-m04a@7s2d8^u&@9e8mx=#w9%+tx@fy$m#92_jysut(^8&_$%1&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+#DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["EngieBM-env.eba-nvrkfna5.us-east-1.elasticbeanstalk.com"]
 
@@ -42,6 +46,7 @@ INSTALLED_APPS = [
     'bmconso',
     'corsheaders',
     'drf_yasg',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -166,7 +171,25 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
+# STATIC_URL = '/static/'
+
+# AWS S3 Static Files Configuration
+AWS_ACCESS_KEY_ID = config('AKIAYYDN62VVMCAOQXCL')
+AWS_SECRET_ACCESS_KEY = config('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')
+AWS_STORAGE_BUCKET_NAME = config('bmconsobucket')
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
+}
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = 'public-read'
+AWS_LOCATION = 'static'
+
+STATICFILES_DIRS = [
+    'backend/static',
+]
+STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
